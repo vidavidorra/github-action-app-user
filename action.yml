@@ -1,0 +1,21 @@
+name: GitHub App user
+author: Jeroen de Bruijn
+description: Get the GitHub App user
+branding:
+  icon: user
+  color: blue
+inputs:
+  slug:
+    description: 'slug of the GitHub App'
+    required: true
+  privateKey:
+    description: 'GitHub App installation access token'
+    required: true
+outputs:
+  username:
+    description: 'username of the GitHub App user'
+  email:
+    description: 'email of the GitHub App user'
+runs:
+  using: node20
+  main: dist/index.js
