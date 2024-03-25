@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.1...v1.0.2) (2024-03-25)
+
+### Documentation
+
+- fix action inputs using `steps` ([e5fe81c](https://github.com/vidavidorra/github-action-app-user/commit/e5fe81c8994aa7142220fee2f07bf012400b7b3c))
+
 ## [1.0.1](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.0...v1.0.1) (2024-03-25)
 
 ### Bug Fixes
