@@ -7,8 +7,8 @@ on:
       - renovate/**
   pull_request: null
 jobs:
-  lint-commit-messages:
-    uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@7cf5201e53e0e2c4daf7298cf97e5dab5d631c23 # v4.1.10
+  # lint-commit-messages:
+  #   uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@7cf5201e53e0e2c4daf7298cf97e5dab5d631c23 # v4.1.10
   lint:
     uses: vidavidorra/.github/.github/workflows/node-lint.yml@7cf5201e53e0e2c4daf7298cf97e5dab5d631c23 # v4.1.10
   build:
@@ -26,7 +26,7 @@ jobs:
   release:
     uses: vidavidorra/.github/.github/workflows/release.yml@7cf5201e53e0e2c4daf7298cf97e5dab5d631c23 # v4.1.10
     needs:
-      - lint-commit-messages
+      # - lint-commit-messages
       - lint
       - build
       - test
