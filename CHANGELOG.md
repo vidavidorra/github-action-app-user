@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.0...v1.0.1) (2024-03-25)
+
+### Bug Fixes
+
+- correct `token` input name ([e409752](https://github.com/vidavidorra/github-action-app-user/commit/e409752bf89970b5b47355244823a9125efd5f90))
+
 ## 1.0.0 (2024-03-25)
 
 ### Features
