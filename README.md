@@ -8,8 +8,8 @@ Get a [**GitHub** App][github-app]'s email and username, from a [**GitHub** Acti
 
 [![Renovate](https://img.shields.io/badge/Renovate-enabled-brightgreen?logo=renovatebot&logoColor=&style=flat-square)](https://renovatebot.com)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079?style=flat-square)](https://github.com/semantic-release/semantic-release)
-[![Code coverage](https://img.shields.io/codecov/c/githubvidavidorra/github-action-app-user?logo=codecov&style=flat-square)](https://codecov.io/gh/vidavidorra/github-action-app-user)
-[![License](https://img.shields.io/github/licensevidavidorra/github-action-app-user?style=flat-square)](LICENSE.md)
+[![Code coverage](https://img.shields.io/codecov/c/github/vidavidorra/github-action-app-user?logo=codecov&style=flat-square)](https://codecov.io/gh/vidavidorra/github-action-app-user)
+[![License](https://img.shields.io/github/license/vidavidorra/github-action-app-user?style=flat-square)](LICENSE.md)
 
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -39,8 +39,8 @@ jobs:
       - uses: vidavidorra/github-action-app-user
         id: app-user
         with:
-          token: ${{ app-token.outputs.token }}
-          slug: ${{ app-token.outputs.app-slug }}
+          token: ${{ steps.app-token.outputs.token }}
+          slug: ${{ steps.app-token.outputs.app-slug }}
       - name: Release
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
