@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.2...v1.0.3) (2024-03-29)
+
+### Reverts
+
+- "ci: temporary disable `lint-commit-messages`" ([efcef7d](https://github.com/vidavidorra/github-action-app-user/commit/efcef7d421ac62accc4c60a37fd297cad53fd411))
+
 ## [1.0.2](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.1...v1.0.2) (2024-03-25)
 
 ### Documentation
