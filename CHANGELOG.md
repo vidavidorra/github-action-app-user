@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.3...v1.0.4) (2024-04-06)
+
+### Documentation
+
+- change Marketplace name to `Get GitHub App user` ([da2b297](https://github.com/vidavidorra/github-action-app-user/commit/da2b297fd189794fa36f99a9fa2861d1ae48f0ac))
+
 ## [1.0.3](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.2...v1.0.3) (2024-03-29)
 
 ### Reverts
