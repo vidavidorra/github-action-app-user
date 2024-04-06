@@ -18,7 +18,7 @@ Get a [**GitHub** App][github-app]'s email and username, from a [**GitHub** Acti
 
 ## Usage
 
-This [**GitHub** Action][github-action] can be used in combination with a [**GitHub** Action][github-action] that creates a [**GitHub** App][github-app] installation token, for example [`actions/create-github-app-token`](https://github.com/actions/create-github-app-token). The workflow below shows an example where this [**GitHub** Action][github-action] is used for the[**semantic-release**](https://github.com/semantic-release/semantic-release) author and committer.
+This [**GitHub** Action][github-action] can be used in combination with a [**GitHub** Action][github-action] that creates a [**GitHub** App][github-app] installation token, for example [`actions/create-github-app-token`](https://github.com/actions/create-github-app-token). The workflow below shows an example where this [**GitHub** Action][github-action] is used for the [**semantic-release**](https://github.com/semantic-release/semantic-release) author and committer.
 
 ```yml
 name: Release

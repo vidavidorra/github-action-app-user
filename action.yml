@@ -1,21 +1,21 @@
-name: GitHub App user
+name: Get GitHub App user
 author: Jeroen de Bruijn
-description: Get the GitHub App user
+description: Get a GitHub App's email and username
 branding:
   icon: user
   color: blue
 inputs:
   slug:
-    description: 'slug of the GitHub App'
+    description: slug of the GitHub App
     required: true
   token:
-    description: 'GitHub App installation access token'
+    description: GitHub App installation access token
     required: true
 outputs:
   username:
-    description: 'username of the GitHub App user'
+    description: username of the GitHub App user
   email:
-    description: 'email of the GitHub App user'
+    description: email of the GitHub App user
 runs:
   using: node20
   main: dist/index.js
