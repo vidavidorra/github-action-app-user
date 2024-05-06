@@ -1,3 +1,9 @@
+## [1.0.10](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.9...v1.0.10) (2024-05-06)
+
+### Bug Fixes
+
+- **deps:** update dependency zod to v3.23.6 ([335604f](https://github.com/vidavidorra/github-action-app-user/commit/335604fd676acb03d8d6372aff4aaf8cee7e1c62))
+
 ## [1.0.9](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.8...v1.0.9) (2024-05-03)
 
 ### Bug Fixes
