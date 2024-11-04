@@ -1,8 +1,8 @@
 {
   "name": "github-action-app-user",
   "version": "1.0.12",
-  "description": "Get a GitHub App's email and username, from a GitHub Action",
   "private": true,
+  "description": "Get a GitHub App's email and username, from a GitHub Action",
   "homepage": "https://github.com/vidavidorra/github-action-app-user#readme",
   "bugs": {
     "url": "https://github.com/vidavidorra/github-action-app-user/issues"
@@ -185,6 +185,11 @@
       "text-summary"
     ]
   },
+  "dependencies": {
+    "@actions/core": "1.11.1",
+    "@actions/github": "6.0.0",
+    "zod": "3.23.8"
+  },
   "devDependencies": {
     "@ava/typescript": "5.0.0",
     "@commitlint/cli": "19.5.0",
@@ -208,9 +213,7 @@
   "engines": {
     "node": ">=20"
   },
-  "dependencies": {
-    "@actions/core": "1.11.1",
-    "@actions/github": "6.0.0",
-    "zod": "3.23.8"
+  "overrides": {
+    "conventional-changelog-conventionalcommits": ">= 8.0.0"
   }
 }
