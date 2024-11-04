@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.12...v1.0.13) (2024-11-04)
+
+### Bug Fixes
+
+- **deps:** update dependency @actions/core to v1.11.0 ([bcbf597](https://github.com/vidavidorra/github-action-app-user/commit/bcbf597680435b0383823e931a51b1e797f82ef8))
+- **deps:** update dependency @actions/core to v1.11.1 ([9358fb8](https://github.com/vidavidorra/github-action-app-user/commit/9358fb8896fdcde89304fdd6d5b43d92ae6e9bff))
+
 ## [1.0.12](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.11...v1.0.12) (2024-05-11)
 
 ### Bug Fixes
