@@ -1,3 +1,9 @@
+## [1.0.19](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.18...v1.0.19) (2025-05-10)
+
+### Bug Fixes
+
+- **deps:** update dependency @actions/github to v6.0.1 ([e133bf1](https://github.com/vidavidorra/github-action-app-user/commit/e133bf1f9b4ddf3f6de022beb6def9fada59f31d))
+
 ## [1.0.18](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.17...v1.0.18) (2025-05-08)
 
 ### Bug Fixes
