@@ -192,7 +192,7 @@
   },
   "devDependencies": {
     "@ava/typescript": "5.0.0",
-    "@commitlint/cli": "19.8.0",
+    "@commitlint/cli": "19.8.1",
     "@octokit/types": "14.0.0",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "7.0.3",
