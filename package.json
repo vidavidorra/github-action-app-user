@@ -195,7 +195,7 @@
     "@commitlint/cli": "19.8.1",
     "@octokit/types": "14.0.0",
     "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/exec": "7.0.3",
+    "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "10.0.1",
     "@types/sinon": "17.0.4",
     "@vidavidorra/commitlint-config": "7.0.14",
