@@ -1,3 +1,9 @@
+## [1.0.24](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.23...v1.0.24) (2025-05-27)
+
+### Bug Fixes
+
+- **deps:** update dependency zod to v3.25.28 ([cdf1ab0](https://github.com/vidavidorra/github-action-app-user/commit/cdf1ab0325fb5503d1c79b5e301a7fe731745312))
+
 ## [1.0.23](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.22...v1.0.23) (2025-05-26)
 
 ### Bug Fixes
