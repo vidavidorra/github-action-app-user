@@ -1,3 +1,9 @@
+## [1.0.54](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.53...v1.0.54) (2025-08-12)
+
+### Bug Fixes
+
+- **deps:** update dependency zod to v4.0.17 ([2bcc2d0](https://github.com/vidavidorra/github-action-app-user/commit/2bcc2d0e37c92aec3d9abeac58b2ff91ea22ec2f))
+
 ## [1.0.53](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.52...v1.0.53) (2025-08-12)
 
 ### Bug Fixes
