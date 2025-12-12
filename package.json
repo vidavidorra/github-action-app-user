@@ -1,6 +1,6 @@
 {
   "name": "github-action-app-user",
-  "version": "1.0.64",
+  "version": "1.0.65",
   "private": true,
   "description": "Get a GitHub App's email and username, from a GitHub Action",
   "homepage": "https://github.com/vidavidorra/github-action-app-user#readme",
