@@ -8,21 +8,21 @@ on:
   pull_request: null
 jobs:
   lint-commit-messages:
-    uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@944db77062e8e41fd9b61ace28f8d77adeaaddfa # v8.0.11
+    uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@debcb8c2c0127b0f1d8af5de4703602dea78dbb4 # v8.0.12
   lint:
-    uses: vidavidorra/.github/.github/workflows/node-lint.yml@944db77062e8e41fd9b61ace28f8d77adeaaddfa # v8.0.11
+    uses: vidavidorra/.github/.github/workflows/node-lint.yml@debcb8c2c0127b0f1d8af5de4703602dea78dbb4 # v8.0.12
   build:
-    uses: vidavidorra/.github/.github/workflows/node-build.yml@944db77062e8e41fd9b61ace28f8d77adeaaddfa # v8.0.11
+    uses: vidavidorra/.github/.github/workflows/node-build.yml@debcb8c2c0127b0f1d8af5de4703602dea78dbb4 # v8.0.12
   test:
-    uses: vidavidorra/.github/.github/workflows/node-test.yml@944db77062e8e41fd9b61ace28f8d77adeaaddfa # v8.0.11
+    uses: vidavidorra/.github/.github/workflows/node-test.yml@debcb8c2c0127b0f1d8af5de4703602dea78dbb4 # v8.0.12
   code-coverage:
-    uses: vidavidorra/.github/.github/workflows/node-test-coverage.yml@944db77062e8e41fd9b61ace28f8d77adeaaddfa # v8.0.11
+    uses: vidavidorra/.github/.github/workflows/node-test-coverage.yml@debcb8c2c0127b0f1d8af5de4703602dea78dbb4 # v8.0.12
     needs:
       - lint
       - build
       - test
   release:
-    uses: vidavidorra/.github/.github/workflows/release.yml@944db77062e8e41fd9b61ace28f8d77adeaaddfa # v8.0.11
+    uses: vidavidorra/.github/.github/workflows/release.yml@debcb8c2c0127b0f1d8af5de4703602dea78dbb4 # v8.0.12
     needs:
       - lint-commit-messages
       - lint
