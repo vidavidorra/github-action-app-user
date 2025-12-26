@@ -1,3 +1,10 @@
+## [1.0.69](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.68...v1.0.69) (2025-12-26)
+
+### Continuous Integration
+
+- replace semantic-release config with `@vidavidorra/semantic-release-config` ([3cac8a3](https://github.com/vidavidorra/github-action-app-user/commit/3cac8a327c2d53e8491824440c713ae90dc94814))
+- use ESLint for linting, instead of XO (which uses ESLint internally) ([1eb26ec](https://github.com/vidavidorra/github-action-app-user/commit/1eb26ec8358a635f05f1016237ba9e07c5e2124d))
+
 ## [1.0.68](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.67...v1.0.68) (2025-12-19)
 
 ### Bug Fixes
