@@ -1,6 +1,6 @@
 const config = {
   '*.{ts,tsx,js,jsx}': [
-    'xo --fix',
+    'eslint --fix',
     () => 'npm run build', // Build so ava doesn't use the bundled code.
     () => 'ava',
     () => 'npm run bundle',
