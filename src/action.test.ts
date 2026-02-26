@@ -15,7 +15,7 @@ const test = anyTest as TestFn<{
   setOutput: SinonStub;
   setFailed: SinonStub;
   user: SinonStub;
-  Action: (typeof ActionModule)['Action'];
+  Action: typeof ActionModule.Action;
 }>;
 
 test.beforeEach(async (t) => {
