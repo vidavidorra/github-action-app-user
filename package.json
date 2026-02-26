@@ -42,9 +42,6 @@
       "!worktrees",
       "src/**/*.test.ts"
     ],
-    "nodeArguments": [
-      "--experimental-test-module-mocks"
-    ],
     "typescript": {
       "rewritePaths": {
         "src/": "dist/"
