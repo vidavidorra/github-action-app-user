@@ -1,3 +1,9 @@
+## [1.0.77](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.76...v1.0.77) (2026-02-26)
+
+### Bug Fixes
+
+- **deps:** update dependency @actions/core to v3 and @actions/github to v9 ([#35](https://github.com/vidavidorra/github-action-app-user/issues/35)) ([f4f1fcf](https://github.com/vidavidorra/github-action-app-user/commit/f4f1fcffc0c7a4c62be6d40a38d5366342be3087))
+
 ## [1.0.76](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.75...v1.0.76) (2026-01-31)
 
 ### Bug Fixes
