@@ -1,18 +1,18 @@
-import core from '@actions/core';
+import {getInput, setOutput, setFailed} from '@actions/core';
 import {AppUser} from './app-user.js';
 
 class Action {
   async run(): Promise<void> {
     try {
-      const slug = core.getInput('slug', {required: true});
-      const token = core.getInput('token', {required: true});
+      const slug = getInput('slug', {required: true});
+      const token = getInput('token', {required: true});
 
       const {email, username} = await new AppUser().user({slug, token});
 
-      core.setOutput('email', email);
-      core.setOutput('username', username);
+      setOutput('email', email);
+      setOutput('username', username);
     } catch (error: unknown) {
-      core.setFailed(error instanceof Error ? error.message : 'Unknown error');
+      setFailed(error instanceof Error ? error.message : 'Unknown error');
       throw error;
     }
   }
