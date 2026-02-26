@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@actions/core": "2.0.3",
-    "@actions/github": "7.0.0",
+    "@actions/github": "9.0.0",
     "zod": "4.3.6"
   },
   "devDependencies": {
