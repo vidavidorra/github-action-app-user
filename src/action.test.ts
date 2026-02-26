@@ -5,24 +5,24 @@ import {type User} from './app-user.js';
 import {type Options} from './options.js';
 import type * as ActionModule from './action.js';
 
+const test = anyTest as TestFn<{
+  Action: typeof ActionModule.Action;
+  getInput: SinonStub;
+  setFailed: SinonStub;
+  setOutput: SinonStub;
+  user: SinonStub;
+}>;
 const options: Record<string, string> = {
   slug: 'my-app',
   token: 'ghs_16C7e42F292c6912E7710c838347Ae178B4a',
 } as const satisfies Options;
 const user: User = {email: 'test@example.com', username: 'test'} as const;
-const test = anyTest as TestFn<{
-  getInput: SinonStub;
-  setOutput: SinonStub;
-  setFailed: SinonStub;
-  user: SinonStub;
-  Action: typeof ActionModule.Action;
-}>;
 
 test.beforeEach(async (t) => {
   const stubs = {
     getInput: stub().callsFake((name: string) => options[name] ?? ''),
-    setOutput: stub(),
     setFailed: stub(),
+    setOutput: stub(),
     user: stub().resolves(user),
   };
 
