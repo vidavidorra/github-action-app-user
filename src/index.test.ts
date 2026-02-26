@@ -1,10 +1,19 @@
 import test from 'ava';
 import {stub} from 'sinon';
-import {Action} from './action.js';
-
-const action = stub(Action.prototype, 'run').resolves();
+import esmock from 'esmock';
 
 test('calls "action" when imported', async (t) => {
-  await import('./index.js');
-  t.is(action.callCount, 1);
+  const run = stub().resolves();
+
+  /* eslint-disable @typescript-eslint/naming-convention */
+  await esmock('./index.js', import.meta.url, {
+    './action.js': {
+      Action: class {
+        run = run;
+      },
+    },
+  });
+  /* eslint-enable @typescript-eslint/naming-convention */
+
+  t.is(run.callCount, 1);
 });

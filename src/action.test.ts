@@ -1,9 +1,9 @@
 import anyTest, {type TestFn} from 'ava';
-import {stub, type SinonStub, restore} from 'sinon';
-import core from '@actions/core';
-import {Action} from './action.js';
-import {AppUser, type User} from './app-user.js';
+import {stub, type SinonStub} from 'sinon';
+import esmock from 'esmock';
+import {type User} from './app-user.js';
 import {type Options} from './options.js';
+import type * as ActionModule from './action.js';
 
 const options: Record<string, string> = {
   slug: 'my-app',
@@ -15,27 +15,43 @@ const test = anyTest as TestFn<{
   setOutput: SinonStub;
   setFailed: SinonStub;
   user: SinonStub;
+  Action: (typeof ActionModule)['Action'];
 }>;
-test.beforeEach((t) => {
-  t.context = {
-    getInput: stub(core, 'getInput').callsFake((name) => options[name] ?? ''),
-    setOutput: stub(core, 'setOutput'),
-    setFailed: stub(core, 'setFailed'),
-    user: stub(AppUser.prototype, 'user').resolves(user),
+
+test.beforeEach(async (t) => {
+  const stubs = {
+    getInput: stub().callsFake((name: string) => options[name] ?? ''),
+    setOutput: stub(),
+    setFailed: stub(),
+    user: stub().resolves(user),
   };
-});
-test.afterEach.always(() => {
-  restore();
+
+  /* eslint-disable @typescript-eslint/naming-convention */
+  const {Action} = await esmock<typeof ActionModule>(
+    './action.js',
+    import.meta.url,
+    {
+      '@actions/core': stubs,
+      './app-user.js': {
+        AppUser: class {
+          user = stubs.user;
+        },
+      },
+    },
+  );
+
+  t.context = {...stubs, Action};
+  /* eslint-enable @typescript-eslint/naming-convention */
 });
 
-test.serial('calls "AppUser.user" with "slug" and "token"', async (t) => {
-  await new Action().run();
+test('calls "AppUser.user" with "slug" and "token"', async (t) => {
+  await new t.context.Action().run();
   t.is(t.context.user.callCount, 1);
   t.deepEqual(t.context.user.firstCall.args, [options]);
 });
 
-test.serial('requires "slug" and "token"', async (t) => {
-  await new Action().run();
+test('requires "slug" and "token"', async (t) => {
+  await new t.context.Action().run();
   t.is(t.context.getInput.callCount, 2);
   t.deepEqual(t.context.getInput.args, [
     ['slug', {required: true}],
@@ -43,34 +59,34 @@ test.serial('requires "slug" and "token"', async (t) => {
   ]);
 });
 
-test.serial('outputs "email"', async (t) => {
-  await new Action().run();
+test('outputs "email"', async (t) => {
+  await new t.context.Action().run();
   t.is(t.context.setOutput.callCount, 2);
   t.deepEqual(t.context.setOutput.firstCall.args, ['email', user.email]);
 });
 
-test.serial('outputs "username"', async (t) => {
-  await new Action().run();
+test('outputs "username"', async (t) => {
+  await new t.context.Action().run();
   t.is(t.context.setOutput.callCount, 2);
   t.deepEqual(t.context.setOutput.secondCall.args, ['username', user.username]);
 });
 
-test.serial('fails when "getInput" throws', async (t) => {
+test('fails when "getInput" throws', async (t) => {
   const error = new Error('getInput error');
   t.context.getInput.throws(error);
-  await t.throwsAsync(async () => new Action().run(), {is: error});
+  await t.throwsAsync(async () => new t.context.Action().run(), {is: error});
   t.deepEqual(t.context.setFailed.firstCall.args, [error.message]);
 });
 
-test.serial('fails when "AppUser.user" throws', async (t) => {
+test('fails when "AppUser.user" throws', async (t) => {
   const error = new Error('AppUser.user error');
   t.context.user.rejects(error);
-  await t.throwsAsync(async () => new Action().run(), {is: error});
+  await t.throwsAsync(async () => new t.context.Action().run(), {is: error});
   t.deepEqual(t.context.setFailed.firstCall.args, [error.message]);
 });
 
-test.serial('fails with "Unknown error" when non-Error', async (t) => {
+test('fails with "Unknown error" when non-Error', async (t) => {
   t.context.getInput.throws({});
-  await t.throwsAsync(async () => new Action().run(), {any: true});
+  await t.throwsAsync(async () => new t.context.Action().run(), {any: true});
   t.deepEqual(t.context.setFailed.firstCall.args, ['Unknown error']);
 });
