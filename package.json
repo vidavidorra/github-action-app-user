@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@ava/typescript": "7.0.0",
-    "@commitlint/cli": "21.2.0",
+    "@commitlint/cli": "21.2.1",
     "@octokit/types": "16.0.0",
     "@types/sinon": "22.0.0",
     "@vidavidorra/commitlint-config": "8.0.2",
