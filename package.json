@@ -85,7 +85,7 @@
     "prettier": "3.9.6",
     "semantic-release": "25.0.8",
     "sinon": "22.0.0",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "engines": {
     "node": ">=20"
