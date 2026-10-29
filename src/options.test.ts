@@ -26,8 +26,13 @@ test(fails, 'token', '', 'an empty');
 test(fails, 'token', `aaaa${token.slice(4)}`, 'a non "ghs_" prefixed');
 test(fails, 'token', `${token.slice(0, -1)}+`, 'an invalid character');
 test(fails, 'token', token.slice(0, -1), 'a 35 character');
-test(fails, 'token', `${token}a`, 'a 37 character');
 test(succeeds, 'token', token, 'a 36 character "ghs_" prefixed');
+test(
+  succeeds,
+  'token',
+  `${token}-1a.${'a'.repeat(520 - 36 - 4)}`,
+  'a 520 character, with "-." characters, "ghs_" prefixed',
+);
 
 test(fails, 'slug', undefined, 'undefined');
 test(fails, 'slug', '', 'an empty');
