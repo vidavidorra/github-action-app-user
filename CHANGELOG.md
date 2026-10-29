@@ -1,3 +1,10 @@
+## [1.0.84](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.83...v1.0.84) (2026-10-29)
+
+### Bug Fixes
+
+- allow `token` input with more than 36 characters ([#60](https://github.com/vidavidorra/github-action-app-user/issues/60)) ([e6dfa39](https://github.com/vidavidorra/github-action-app-user/commit/e6dfa3914f1fdefc2affefc4261f64a046646008))
+- **deps:** update vidavidorra/.github action to v8.1.25 ([e4b58c5](https://github.com/vidavidorra/github-action-app-user/commit/e4b58c5ec27019ee7073fa057adad283f2406413))
+
 ## [1.0.83](https://github.com/vidavidorra/github-action-app-user/compare/v1.0.82...v1.0.83) (2026-05-07)
 
 ### Bug Fixes
